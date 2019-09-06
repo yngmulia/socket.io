@@ -21,14 +21,13 @@
     <form action="">
       <input id="m" autocomplete="off" /><button>Send</button>
     </form>
-
     <script src="../socket.io/socket.io.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
     <script>
       $(function () {
         const id = 'me' + Math.floor(Math.random() * 100) + 1;
         let to = $('#to').val();
-        $('#from').val(id);
+        $('#from').val(id); // alamat yang dituju
 
         var socket = io();
         $('form').submit(function(e) { // console.log($('#to').val());
